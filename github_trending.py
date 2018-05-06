@@ -21,6 +21,6 @@ if __name__ == '__main__':
     url = 'https://api.github.com/search/repositories'
     maxstars_items_list = get_maxstars_items(url)
     print('A list of new github repos with max stargazers count:\n')
-    for item in maxstars_items_list:
-        html_url, stargazers_count, open_issues = get_repo_stats(item)
-        print(html_url, 'stars:', stargazers_count, 'open issues:', open_issues)
+    for maxstars_item in maxstars_items_list:
+        html_url, stargazers, open_issues = get_repo_stats(maxstars_item)
+        print(html_url, 'stars:', stargazers, 'issues:', open_issues)
